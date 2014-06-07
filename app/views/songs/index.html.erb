@@ -1,0 +1,21 @@
+<%= form_for @song do |f| %>
+  <p>
+    <%= f.label :song_name %>
+    <%= f.text_field :song_name %>
+  </p>
+  <p>
+    <%= f.label :band_name %>
+    <%= f.text_field :band_name %>
+  </p>
+  <p>
+    <%= f.submit 'Add song' %>
+  </p>
+<% end %>
+
+<% @songs.each do |song| %>
+  <ul>
+    <li>
+      <%= song.song_name %>, <%= song.band_name %>
+    </li>
+  </ul>
+<% end %>
